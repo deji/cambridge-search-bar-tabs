@@ -1,0 +1,7 @@
+<md-tabs style="background-color:white;" md-dynamic-height md-selected="$ctrl.selectedIndex">
+  <md-tab ng-repeat='tab in $ctrl.searchScopes' value='{{tab}}'>
+    <md-tab-label>
+      <span translate="{{'tabbedmenu.'+tab+'.label'}}"></span>
+    </md-tab-label>
+  </md-tab>
+</md-tabs>
