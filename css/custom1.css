@@ -1,0 +1,11 @@
+/* remove redundant tab selector in search bar */
+prm-search-bar prm-tabs-and-scopes-selector > div > md-divider:nth-child(1),
+prm-search-bar prm-tabs-and-scopes-selector > div > md-input-container:nth-child(2) {
+    display: none !important;
+}
+
+/* styling for camtabs */
+/*radio button styling*/
+md-radio-button.md-checked ._md-on{
+    background-color: #dd222f;
+}

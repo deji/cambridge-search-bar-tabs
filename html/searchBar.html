@@ -21,11 +21,9 @@
                   </md-item-template>
                 </prm-autocomplete>
               </div>
-<!--
               <div class="search-options" ng-class="{'flex-sm-0 flex-0 hide-on-xs':!$ctrl.showTabsAndScopesVal(), 'flex-sm-40 visible':$ctrl.showTabsAndScopesVal()}">
                 <prm-tabs-and-scopes-selector ng-if="$ctrl.showTabsAndScopesVal()" [(selected-scope)]="$ctrl.scopeField" [(selected-tab)]="$ctrl.selectedTab" ng-class="{'is-displayed':$ctrl.showTabsAndScopesVal()}"></prm-tabs-and-scopes-selector>
               </div>
--->
               <div class="search-actions" ng-if="::(!$ctrl.scopesDialerConfiguration.display)" layout-align-xs="start center">
                 <md-button class="zero-margin md-icon-button" ng-if="!$ctrl.advancedSearch" ng-click="$ctrl.switchAdvancedSearch()" hide-gt-xs>
                   <prm-icon icon-type="svg" svg-icon-set="primo-ui" icon-definition="tune"></prm-icon>
