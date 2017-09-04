@@ -51,12 +51,28 @@
         </div>
       </div>
     </div>
-    <div class="search-switch-buttons" layout-sm="column" layout-align-sm="start stretch" hide-xs ng-class="{'facet-to-left-advanced-search': $ctrl.facetToLeft}">
-      <md-button aria-label="{{'nui.aria.searchBar.advancedLink' | translate}}" class="switch-to-advanced zero-margin button-with-icon" ng-if="!$ctrl.advancedSearch" ng-click="$ctrl.switchAdvancedSearch()"><span layout="row" layout-align="start center"><span translate="label.advanced_search"></span></span>
+
+
+    <div class="search-switch-buttons"
+         layout='column'
+         layout-align="center"
+         layout-sm="column"
+         layout-align-sm="start stretch"
+         hide-xs ng-class="{'facet-to-left-advanced-search': $ctrl.facetToLeft}">
+      <cam-browse-button class="switch-to-advanced zero-margin button-with-icon"></cam-browse-button>
+      <md-button aria-label="{{'nui.aria.searchBar.advancedLink' | translate}}" class="switch-to-advanced zero-margin button-with-icon" ng-if="!$ctrl.advancedSearch" ng-click="$ctrl.switchAdvancedSearch()">
+        <span layout="row" layout-align="start center">
+          <span translate="label.advanced_search"></span>
+        </span>
       </md-button>
-      <md-button class="switch-to-simple zero-margin button-with-icon" ng-if="$ctrl.advancedSearch" ng-click="$ctrl.switchAdvancedSearch()"><span layout="row" layout-align="start center"><span translate="label.simple_search"></span></span>
+      <md-button class="switch-to-simple zero-margin button-with-icon" ng-if="$ctrl.advancedSearch" ng-click="$ctrl.switchAdvancedSearch()">
+        <span layout="row" layout-align="start center">
+          <span translate="label.simple_search"></span>
+        </span>
       </md-button>
     </div>
+
+
     <div flex="0" flex-md="0" flex-sm="0" flex-lg="15" flex-xl="15" ng-class="{'flex-lgPlus-10': $ctrl.facetToLeft && !$ctrl.mediaQueries.xs}"></div>
   </div>
   <div layout="row" ng-if="!$ctrl.advancedSearch && $ctrl.showSignIn">
