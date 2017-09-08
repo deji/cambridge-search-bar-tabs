@@ -1,7 +1,7 @@
 {
   "name": "primo-explore-cambridge",
   "version": "0.0.1",
-  "description": "",
+  "description": "Cambridge Primo NUI components",
   "main": "js/primo-explore-cambridge.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
