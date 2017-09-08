@@ -1,6 +1,24 @@
 {
-    "name": "primo-explore-cam-tabbed-interface",
-    "version": "0.0.1",
-    "description": "Cambridge tabbed search interface",
-    "author": "mehmet"
-  }
+  "name": "primo-explore-cambridge",
+  "version": "0.0.1",
+  "description": "Cambridge Primo NUI components",
+  "main": "js/primo-explore-cambridge.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/libis/cambridge-search-bar-tabs.git"
+  },
+  "keywords": [
+	"primo",
+	"NUI",
+	"Ex Libris"
+  ],
+  "author": "Mehmet Celik",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/libis/cambridge-search-bar-tabs/issues"
+  },
+  "homepage": "https://github.com/libis/cambridge-search-bar-tabs#readme"
+}
