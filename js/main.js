@@ -13,7 +13,7 @@ import Components from './components'
 import searchBarHTML from '../html/searchBar.html'
 
 //Create the centralCustom module;
-let app = angular.module('centralCustom',[])
+let app = angular.module('viewCustom', [])
                  .run(($templateCache) => {
                    $templateCache.put('components/search/searchBar/search-bar.html', searchBarHTML);
                  });
@@ -23,7 +23,7 @@ let afterComponents = {};
 
 //Create all components and determine in which after component these need to be
 //injected
-console.log('Loading centralCustom components');
+console.log('Loading components');
 Components.all.forEach((component) => {
   if (component.appendTo) {
     let elements = afterComponents[component.appendTo] || [];
