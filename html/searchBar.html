@@ -57,17 +57,22 @@
          layout-sm="column"
          layout-align-sm="start stretch"
          hide-xs ng-class="{'facet-to-left-advanced-search': $ctrl.facetToLeft}">
-      <cam-browse-button class="switch-to-advanced zero-margin button-with-icon"></cam-browse-button>
-      <md-button aria-label="{{'nui.aria.searchBar.advancedLink' | translate}}" class="switch-to-advanced zero-margin button-with-icon" ng-if="!$ctrl.advancedSearch" ng-click="$ctrl.switchAdvancedSearch()">
-        <span layout="row" layout-align="start center">
-          <span translate="label.advanced_search"></span>
-        </span>
-      </md-button>
-      <md-button class="switch-to-simple zero-margin button-with-icon" ng-if="$ctrl.advancedSearch" ng-click="$ctrl.switchAdvancedSearch()">
-        <span layout="row" layout-align="start center">
-          <span translate="label.simple_search"></span>
-        </span>
-      </md-button>
+
+          <cam-browse-button></cam-browse-button>
+
+          <md-button aria-label="{{'nui.aria.searchBar.advancedLink' | translate}}"
+                     class="switch-to-advanced zero-margin button-with-icon"
+                     ng-if="!$ctrl.advancedSearch" ng-click="$ctrl.switchAdvancedSearch()">
+            <span layout="row" layout-align="start center">
+              <span translate="label.advanced_search"></span>
+            </span>
+          </md-button>
+
+          <md-button class="switch-to-simple zero-margin button-with-icon" ng-if="$ctrl.advancedSearch" ng-click="$ctrl.switchAdvancedSearch()">
+            <span layout="row" layout-align="start center">
+              <span translate="label.simple_search"></span>
+            </span>
+          </md-button>
     </div>
 
 
