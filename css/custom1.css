@@ -9,3 +9,31 @@ prm-search-bar prm-tabs-and-scopes-selector > div > md-input-container:nth-child
 md-radio-button.md-checked ._md-on{
     background-color: #dd222f;
 }
+
+/*radio button styling*/
+md-radio-button.md-checked ._md-on{
+    background-color: #dd222f;
+}
+
+/*height above searchbox*/
+md-radio-group {
+    padding:5px 0;
+    line-height:38px;
+    border-bottom:1px solid #ececec;
+}
+
+/*space between RM and iDiscover*/
+.__gt-xs prm-search-bar .search-elements-wrapper.simple-mode .simple-search-wrapper, .__gt-xs prm-tags-search-bar .search-elements-wrapper.simple-mode .simple-search-wrapper{
+    margin-top: 20px;
+}
+
+/*RB text and position treatment*/
+.layout-wrap {
+    padding-left: 18px;
+    font-size:17px;
+}
+
+/*hide the options appearing below the search bar*/
+#prm-simple-search {
+    display: none !important;
+}
