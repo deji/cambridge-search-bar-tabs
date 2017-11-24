@@ -41,5 +41,5 @@ prm-search-bar .simple-search-wrapper md-autocomplete-wrap input, prm-tags-searc
 .search-switch-buttons.hide-xs.layout-sm-column.layout-align-sm-start-stretch button[aria-label="Browse"] {
     text-transform: capitalize;
     font-size:18px;
-    padding-top: 0.5em;
+    margin-top: 1.1em !important;
 }

@@ -13,7 +13,7 @@ import Components from './components'
 import searchBarHTML from '../html/searchBar.html'
 
 //Create the centralCustom module;
-let app = angular.module('viewCustom', [])
+let app = angular.module('centralCustom', [])
                  .run(($templateCache) => {
                    $templateCache.put('components/search/searchBar/search-bar.html', searchBarHTML);
                  });
