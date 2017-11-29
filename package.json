@@ -1,6 +1,6 @@
 {
-  "name": "primo-explore-cambridge",
-  "version": "0.0.1",
+  "name": "primo-explore-cam-search-bar-tabs",
+  "version": "0.0.2",
   "description": "Cambridge Primo NUI components",
   "main": "js/primo-explore-cambridge.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/libis/cambridge-search-bar-tabs.git"
+    "url": "git+https://github.com/deji/cambridge-search-bar-tabs.git"
   },
   "keywords": [
 	"primo",
@@ -20,5 +20,5 @@
   "bugs": {
     "url": "https://github.com/libis/cambridge-search-bar-tabs/issues"
   },
-  "homepage": "https://github.com/libis/cambridge-search-bar-tabs#readme"
+  "homepage": "https://github.com/deji/cambridge-search-bar-tabs#readme"
 }
