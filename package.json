@@ -1,6 +1,6 @@
 {
   "name": "primo-explore-cam-search-bar-tabs",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Cambridge Primo NUI components",
   "main": "js/primo-explore-cambridge.js",
   "scripts": {
@@ -11,9 +11,9 @@
     "url": "git+https://github.com/deji/cambridge-search-bar-tabs.git"
   },
   "keywords": [
-	"primo",
-	"NUI",
-	"Ex Libris"
+    "primo",
+    "NUI",
+    "Ex Libris"
   ],
   "author": "Mehmet Celik",
   "license": "MIT",
