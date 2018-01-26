@@ -1,0 +1,23 @@
+/* remove redundant tab selector in search bar */
+prm-search-bar prm-tabs-and-scopes-selector > div > md-divider:nth-child(1),
+prm-search-bar prm-tabs-and-scopes-selector > div > md-input-container:nth-child(2) {
+    display: none !important;
+}
+
+/* styling for camtabs */
+/*radio button styling*/
+md-radio-button.md-checked ._md-on{
+    background-color: #dd222f;
+}
+
+.cam-button:hover:not([disabled]) {
+  color:white;
+}
+/*red bar in front of advanced search, and text treatment*/
+.cam-button {
+    color: white;
+    text-transform: capitalize;
+    font-size:18px;
+    border-left:5px solid #dd222f;
+    padding-top: 0.5em;
+}
