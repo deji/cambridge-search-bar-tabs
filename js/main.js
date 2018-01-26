@@ -13,38 +13,56 @@ import Components from './components'
 import searchBarHTML from '../html/searchBar.html'
 
 //Create the viewCustom module;
-if (typeof(app) === "undefined") {
-  var app = angular.module('viewCustom', [])
-}
-app.run(($templateCache) => {
-      $templateCache.put('components/search/searchBar/search-bar.html', searchBarHTML);
-    });
+console.log('Starting');
 
-//Contains the after component selectors that will be injected
-let afterComponents = {};
-
-//Create all components and determine in which after component these need to be
-//injected
-console.log('Loading components');
-Components.all.forEach((component) => {
-  if (component.appendTo) {
-    let elements = afterComponents[component.appendTo] || [];
-    elements.push(component.name);
-    afterComponents[component.appendTo] = elements;
+if (typeof app === "undefined") {
+  try {
+    app = angular.module('viewCustom');
+    console.log('Referencing "app"');
+  } catch (e) {
+    try {
+      app = angular.module('viewCustom', []);
+      console.log('creating "app"');
+    } catch (e) {
+      console.log('unable to create app')
+    }
   }
+} else {
+  app = angular.module('viewCustom');
+  console.log('Found a reference to app');
+}
 
-  console.log(`\t\t${component.name}`);
-  app.component(component.name.toCamelCase(), component.config);
-});
-
-//Inject place holders into the after components
-Object.keys(afterComponents).forEach((component,i) => {
-  let subComponents = afterComponents[component];
-
-  app.component(component.toCamelCase(), {
-    bindings:{
-      parentCtrl: '<'
-    },
-    template: subComponents.map(m => `<${m} parent-ctrl="$ctrl"></${m}>`).join("")
+if (app) {
+  app.run(($templateCache) => {
+    $templateCache.put('components/search/searchBar/search-bar.html', searchBarHTML);
   });
-});
+
+  //Contains the after component selectors that will be injected
+  let afterComponents = {};
+
+  //Create all components and determine in which after component these need to be
+  //injected
+  console.log('Loading components');  
+  Components.all.forEach((component) => {
+    if (component.appendTo) {
+      let elements = afterComponents[component.appendTo] || [];
+      elements.push(component.name);
+      afterComponents[component.appendTo] = elements;
+    }
+
+    console.log(`\t\t${component.name}`);
+    app.component(component.name.toCamelCase(), component.config);
+  });
+
+  //Inject place holders into the after components
+  Object.keys(afterComponents).forEach((component, i) => {
+    let subComponents = afterComponents[component];
+
+    app.component(component.toCamelCase(), {
+      bindings: {
+        parentCtrl: '<'
+      },
+      template: subComponents.map(m => `<${m} parent-ctrl="$ctrl"></${m}>`).join("")
+    });
+  });
+}

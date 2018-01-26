@@ -14,7 +14,8 @@ camBrowseButtonController.$inject = ['$state'];
 
 export let camBrowseButtonConfig = {
   bindings : {
-    parentCtrl: '<'
+    parentCtrl: '<',
+    isAdvanced: '='
   },
   controller: camBrowseButtonController,
   template: camBrowseButtonHTML

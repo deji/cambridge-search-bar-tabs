@@ -10,7 +10,6 @@
 import './utils'
 
 /* import your component configuration*/
-import {pnxXmlConfig} from './components/prmSearchResultThumbnailContainerAfter/pnxXml'
 import {camTabsConfig} from './components/general/camTabs'
 import {camBrowseButtonConfig} from './components/general/camBrowseButton'
 
@@ -30,7 +29,6 @@ export default class AfterComponents {
         </prm-logo-after>
     */
     return [
-      {name: 'pnx-xml', config: pnxXmlConfig, enabled: true, appendTo: 'prm-brief-result-container-after'},
       {name: 'cam-tabs', config: camTabsConfig, enabled: true, appendTo: null},
       {name: 'cam-browse-button', config: camBrowseButtonConfig, enabled: true, appendTo: null}
     ].filter((m) => m.enabled);
