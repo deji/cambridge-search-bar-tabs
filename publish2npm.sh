@@ -13,8 +13,7 @@ cp css/custom1.css /tmp/release.npm/css/custom1.css
 
 cd /tmp/release.npm
 
-npm pack
 #Enable commands below if you wish to publish to Npm
-#npm publish
-#cd -
+npm publish
+cd -
 #rm -Rf /tmp/release.npm

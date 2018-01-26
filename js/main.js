@@ -12,11 +12,13 @@
 import Components from './components'
 import searchBarHTML from '../html/searchBar.html'
 
-//Create the centralCustom module;
-let app = angular.module('viewCustom', [])
-                 .run(($templateCache) => {
-                   $templateCache.put('components/search/searchBar/search-bar.html', searchBarHTML);
-                 });
+//Create the viewCustom module;
+if (typeof(app) === "undefined") {
+  var app = angular.module('viewCustom', [])
+}
+app.run(($templateCache) => {
+      $templateCache.put('components/search/searchBar/search-bar.html', searchBarHTML);
+    });
 
 //Contains the after component selectors that will be injected
 let afterComponents = {};
