@@ -1,3 +1,14 @@
+/* .cam-button:hover:not([disabled]) {
+  color:white;
+}
+
+.cam-button {
+    color: white;
+    text-transform: capitalize;
+    font-size:18px;
+    padding-top: 0.5em;
+} */
+
 /* remove redundant tab selector in search bar */
 prm-search-bar prm-tabs-and-scopes-selector > div > md-divider:nth-child(1),
 prm-search-bar prm-tabs-and-scopes-selector > div > md-input-container:nth-child(2) {
@@ -10,14 +21,36 @@ md-radio-button.md-checked ._md-on{
     background-color: #dd222f;
 }
 
-.cam-button:hover:not([disabled]) {
-  color:white;
+/*height above searchbox*/
+md-radio-group {
+    padding:5px 0;
+    border-bottom:1px solid #ececec;
 }
-/*red bar in front of advanced search, and text treatment*/
-.cam-button {
-    color: white;
+
+/*space between RM and iDiscover*/
+.__gt-xs prm-search-bar .search-elements-wrapper.simple-mode .simple-search-wrapper, .__gt-xs prm-tags-search-bar .search-elements-wrapper.simple-mode .simple-search-wrapper{
+    margin-top: 20px;
+}
+
+/*RB text and position treatment*/
+.layout-wrap {
+    padding-left: 18px;
+    font-size:17px;
+}
+
+/*get rid of round corner of search box*/
+prm-search-bar .simple-search-wrapper md-autocomplete-wrap input, prm-tags-search-bar .simple-search-wrapper md-autocomplete-wrap input {
+    border-radius: 0;
+}
+
+/*hide the options appearing below the search bar*/
+#prm-simple-search {
+    display: none !important;
+}
+
+/* browse button next to search */
+.search-switch-buttons.hide-xs.layout-sm-column.layout-align-sm-start-stretch button[aria-label="Browse"] {
     text-transform: capitalize;
     font-size:18px;
-    border-left:5px solid #dd222f;
-    padding-top: 0.5em;
+    margin-top: 1.8em !important;
 }
