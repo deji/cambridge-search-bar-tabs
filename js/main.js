@@ -16,6 +16,7 @@ import searchBarHTML from '../html/searchBar.html'
 console.log('Starting');
 
 if (typeof app === "undefined") {
+  var app;
   try {
     app = angular.module('viewCustom');
     console.log('Referencing "app"');
@@ -23,8 +24,9 @@ if (typeof app === "undefined") {
     try {
       app = angular.module('viewCustom', []);
       console.log('creating "app"');
-    } catch (e) {
+    } catch (f) {
       console.log('unable to create app')
+      console.log(f)
     }
   }
 } else {
